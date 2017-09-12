@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<style> 
+/* ------------  Css para el modelo5 --**/
+	/*cabecera de la pagina : Layout*/
+.header {
+    background-color: #f1f1f1;
+    padding: 0px;
+    position: fixed;
+    width: 100%;
+    max-height: 90%;
+   height: 130px;
+}
+.header .imgfijo{
+	margin: 0;
+	padding: 0px;
+	height: 140px;
+	width: 100%
+}
+.header .imgsuper{
+	float:right;
+	position: absolute;
+	padding-top: 0.2em;
+	padding-right:  5%;
+	width: 10.9999%;
+	height: 150px;
+}
+.header .h1fijo{
+	position: absolute;
+	padding-top: 0.2em;
+	padding-left:  5%;
+	font-family: 'Roboto', georgia,serif;
+	font-size: 3em;
+	color: #FEFEFE;
+	letter-spacing: 0.5px;
+	line-height: 0.9em;
+}
+.header .h1fijo1{
+	position: absolute;
+	padding-top: 0.2em;
+	padding-left:  4.5%;
+	font-family: 'Roboto', georgia,serif;
+	font-size: 3.1em;
+	color: #020202;
+	letter-spacing: 0.5px;
+	line-height: 0.9em;
+}
+/*  Menu Navegador   nav layout */
+/* The navbar container */
+.menu {
+    overflow: hidden;
+    background-color: #333;
+    top: 140px;
+    position: fixed;
+    height: 3em;
+    width: 100%;
+    vertical-align: center;
+}
+.menu button{
+	margin: 0.5em;
+	margin-left: 0;
+	padding: 1em;
+	padding-top: 0.8em;
+    padding-bottom: 0.5em;
+    background-color: #34B431;
+    border-radius: 15px;
+}
+.menu input{
+	margin: 0.5em;
+	margin-right: 0;
+	padding: 1em;
+	padding-top: 0.8em;
+    padding-bottom: 0.5em;
+    width: 20em;
+    max-width: 30em;
+}
+/* Navbar links */
+.menu a {
+	margin: 0.5em;
+	padding: 1em;
+    padding-top: 0.5em;
+    padding-bottom: 0.3em;
+    color: #f2f2f2;
+    text-align: center;
+    font-size: 18px;
+    font-family: 'Roboto',sans-serif;
+    float: left;
+    display: block;
+    text-decoration: none;
+}
+
+/* Links - change color on hover */
+.menu a:hover {
+    background-color: #ddd;
+    color: black;
+    border-radius: 15px;
+} 
+
+/* Contenedores utilizando Flex*/ 
+.flex-container {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    width: 100%;
+    height: 550px;
+    background-color: #EEEBEB;
+    padding:3px;
+    padding-top: 180px;
+}
+
+.flex-itemscroll {
+	-webkit-align-self: stretch;
+/*    background-color: #D2E0F8;
+*/    width: 180px;
+    height: auto;
+    margin: 10px;
+    overflow:auto;
+	font-family: 'Roboto',sans-serif;
+	text-align: center;
+	
+}
+.flex-itemscroll p{
+	color: #896206;
+	background-color: #F2F4CE;
+}
+.flex-itemcuerpo {
+	-webkit-align-self: stretch;
+/*    background-color: #D2E0F8;
+*/    width: 30%;
+    height: auto;
+    margin: 10px;
+    overflow:auto;
+}
+.flex-itemcuerpo  img {
+    width: 80%;
+    height: auto;
+    border-radius:15px;
+    padding: 5px;
+    /*visibility: hidden;*/
+}
+.flex-itemdetalle {
+-webkit-align-self: stretch;
+/*    background-color: #F1F3F7;
+*/    width: 70%;
+    height: auto;
+    margin: 10px;
+    overflow:auto;
+    padding: 20px;
+}
+.flex-itemscroll  img {
+    width: 70%;
+    height: auto;
+    border-radius:15px;
+    padding: 5px;
+}
+.flex-itemscroll  img:hover {
+    border: 3px solid #777;
+}
+  /*---------- Css para la tabla */
+
+table {
+    border-collapse: collapse;
+    border: 1px solid black;
+    width: 100%;
+}
+th, td {
+    text-align: left;
+    vertical-align:top;
+    padding: 8px;
+}
+
+tr:nth-child(even){
+background-color: #F0E4BE;
+}
+td.negrilla{
+    text-align: center;
+  text-decoration: none;
+}
+/*          */
+.ptitulo {
+	color: #896206;
+	background-color: #F2F4CE;
+	font-size: 20px;
+		font-family: 'Roboto',sans-serif;
+
+}
+</style>
+<script>
+	function iniimg(elemento)
+	{
+		ocultarimg();
+		document.getElementById(elemento).style.visibility = "visible";
+		document.getElementById(elemento).style.display = "";
+	}
+
+	function visibleimg(elemento) {
+		ocultarimg();
+		document.getElementById(elemento).style.visibility = "visible";
+		document.getElementById(elemento).style.display = "";
+		//alert(elemento)	;
+	//alert(document.getElementById(elemento).style.visibility);
+	}
+	function ocultarimg()
+	{
+		document.getElementById("girl").style.visibility = "hidden"; 
+		document.getElementById("girl").style.display="none";
+		document.getElementById("girl-young").style.visibility="hidden";
+		document.getElementById("girl-young").style.display="none";
+		document.getElementById("man-suit").style.visibility="hidden";
+		document.getElementById("man-suit").style.display="none";
+	}
+
+</script>		
+</head>
+<body onload="iniimg('girl')">
+<div class="header">
+ 	<h1 class="h1fijo1">Moda Fashion<br>Define Tu estilo</h1>
+ 	<h1 class="h1fijo">Moda Fashion<br>Define Tu estilo</h1>
+<!--  	<img class="imgsuper" src="images/women.png" alt="">
+ --> 	<img class="imgfijo" src="images/portada1cafesin.png" alt="">
+</div>
+<div class="menu">
+<a href="index.html">Inicio</a>
+
+  <a href="#">Nosotros</a>
+  <a href="detalle.html">Tienda</a>
+  <a href="#">FAQ</a>
+  <input type="text" name="txtbusqueda" placeholder="Buscar...">
+  <button>Buscar</button>
+</div>
+<!-- aqui cuerpo -->
+<div class="flex-container">
+  <div class="flex-itemscroll">
+  <p>
+  Modelos <br> disponibles
+  </p>
+  <img src="images/girl.png" onclick="visibleimg('girl')">
+  <img src="images/man-suit.png" onclick="visibleimg('man-suit')">
+  <img src="images/girl-young.png" onclick="visibleimg('girl-young')">
+  </div>
+  <div class="flex-itemcuerpo">
+		<div id="girl">
+			<img src="images/girl.png" >
+		</div>
+		<div id="man-suit">
+			<img  src="images/man-suit.png" >
+		</div>
+		<div id="girl-young">
+  			<img  src="images/girl-young.png" >
+		</div>
+				
+  </div>
+  <div class="flex-itemdetalle">
+  <p class="ptitulo">Modelo: K234 Procedencia : Italia</p>
+	<div  class="floating-box-right">
+  <table>
+  <tr>
+  	<th class="negrilla">
+    Detalles
+    </th>
+  </tr>
+    <tr>
+      <td >Material:</td>
+      <td>65% Polyester + 30% Algodon + 5% Spandex</td>
+    </tr>
+    <tr>
+      <td>Color:</td>
+      <td>Gris / Verde</td>
+    </tr>
+    <tr>
+      <td>Tamaño (Size):</td>
+      <td>S/ M/ L/ XL/</td>
+    </tr>
+    <tr>
+      <td>Notas:</td>
+      <td>
+      	<p>* Tamaño: Detalles de Comparacion, los tamaños pueden varias de Ud., con una diferencia de 1/2 pulgada. Gracias </p>
+        <p>* Por Favor tome Nota que talvez el COLOR no es el 100% igual al producto actual, porque la camara y el monitor puede modificar la textura original.
+        
+        
+        </p>
+      </td>
+    </tr>
+    
+  </table>
+</div>
+  </div>  
+</div>
+
+</body>
+</html>
